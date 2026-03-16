@@ -12,14 +12,14 @@ How this app works:
    This makes the app fully compatible with cloud deployments like Render.
 """
 import sys
+sys.path.insert(0, ".")
 import os
 import base64
 import cv2
 import numpy as np
 import threading
+
 from flask import Flask, render_template, Response, request, jsonify, send_file
-sys.path.append("/opt/render/project")
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from werkzeug.utils import secure_filename
 
 # Pull in all the settings from config.py
