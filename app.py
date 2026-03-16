@@ -11,12 +11,14 @@ How this app works:
  - The "Speak" button uses the browser's built-in Web Speech API (no server audio needed)
    This makes the app fully compatible with cloud deployments like Render.
 """
+import sys
 import os
 import base64
 import cv2
 import numpy as np
 import threading
 from flask import Flask, render_template, Response, request, jsonify, send_file
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from werkzeug.utils import secure_filename
 
 # Pull in all the settings from config.py
