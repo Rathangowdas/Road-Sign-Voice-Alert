@@ -12,7 +12,6 @@ How this app works:
    This makes the app fully compatible with cloud deployments like Render.
 """
 import sys
-sys.path.insert(0, ".")
 import os
 import base64
 import cv2
