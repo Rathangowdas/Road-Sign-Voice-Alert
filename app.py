@@ -18,6 +18,7 @@ import cv2
 import numpy as np
 import threading
 from flask import Flask, render_template, Response, request, jsonify, send_file
+sys.path.append("/opt/render/project")
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from werkzeug.utils import secure_filename
 
